@@ -1,0 +1,33 @@
+<html ng-app="app">
+
+  <head>
+    <script src="extern/jquery.min.js"></script>
+    <script src="extern/jquery.tmpl.min.js"></script>
+    <script src="extern/jss.js"></script>
+
+    <script src="ldvgui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="ldvgui.css"></link>
+  </head>
+
+  <script id="template-log-msg" type="text/x-jquery-tmpl">
+    <div class="log-msg">
+      Start: <span class="start">${start}</span> &mdash; <span class="end">${end}</span> seconds elapsed
+
+      <table class="log-list">
+        {{each(i, log) logs}}
+          <tr class="level${ log[1] }">
+            <td>${ log[0] }</td>
+            <td>${ log[2] }</td>
+          </tr>
+        {{/each}}
+      </table>
+
+    </div>
+  </script>
+
+  <body>
+    <div id="pane-log-msgs"></div>
+  </body>
+
+</html>

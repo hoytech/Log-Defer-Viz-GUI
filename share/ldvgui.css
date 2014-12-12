@@ -1,0 +1,25 @@
+body {
+  font-family: Helvetica, Arial, Sans-Serif;
+  background-color: rgb(192, 238, 255);
+}
+
+.log-msg .log-list {
+  margin-left: 50px;
+  margin-bottom: 25px;
+}
+
+.log-msg .log-list tr.level10 {
+  color: red;
+}
+
+.log-msg .log-list tr.level20 {
+  color: #A84100;
+}
+
+.log-msg .log-list tr.level30 {
+  color: green;
+}
+
+.log-msg .log-list tr.level40 {
+  color: blue;
+}
