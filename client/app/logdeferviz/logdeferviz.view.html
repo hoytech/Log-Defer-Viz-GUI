@@ -1,0 +1,16 @@
+<div class="log-msg">
+
+  <div ng-repeat="message in ldv.model.messages track by $index">
+    Start: <span class="start">{{message.start}}</span>
+    &mdash;
+    End: <span class="end">{{message.end}}</span> seconds elapsed
+
+    <table class="log-list">
+      <tr ng-repeat="log in message.logs" class="level{{ log[1] }}">
+        <td>{{ log[0] }}</td>
+        <td>{{ log[2] }}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>

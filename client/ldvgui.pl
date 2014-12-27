@@ -2,7 +2,8 @@ use common::sense;
 
 use Thrust;
 use AnyEvent;
-use Cwd;
+use File::Basename;
+use Cwd 'abs_path';
 
 
 if (!@ARGV) {
@@ -15,11 +16,11 @@ if (!@ARGV) {
 my $thrust = Thrust->new;
 
 my $window = $thrust->window(
-              root_url => 'file://' . getcwd() . '/share/ldvgui.html',
+              root_url => 'file://' . dirname(abs_path($0)) . '/index.html',
               title => 'Log Defer Viz: ' . join(' ', @ARGV),
-              icon_path => getcwd() . '/icon.png',
+              icon_path => dirname(abs_path($0)) . '/assets/img/icon.png',
             )->on(closed => sub { exit })
-             #->open_devtools
+             ->open_devtools
              ->show;
 
 $window->on(remote => sub {

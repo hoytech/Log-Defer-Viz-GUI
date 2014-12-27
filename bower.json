@@ -1,0 +1,19 @@
+{
+  "name": "Log-Defer-Viz-GUI",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://github.com/hoytech/Log-Defer-Viz-GUI",
+  "description": "Log Defer Viz GUI using Thrust",
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.8",
+    "angular-route": "~1.3.8"
+  }
+}

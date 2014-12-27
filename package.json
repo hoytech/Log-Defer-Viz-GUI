@@ -1,0 +1,25 @@
+{
+  "name": "Log-Defer-Viz-GUI",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Log Defer Viz GUI using Thrust",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoytech/Log-Defer-Viz-GUI"
+  },
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/hoytech/Log-Defer-Viz-GUI/issues"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-inline-angular-templates": "^0.1.5"
+  }
+}
