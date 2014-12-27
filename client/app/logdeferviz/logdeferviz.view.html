@@ -6,7 +6,8 @@
     End: <span class="end">{{message.end}}</span> seconds elapsed
 
     <table class="log-list">
-      <tr ng-repeat="log in message.logs" class="level{{ log[1] }}">
+      <tr ng-repeat="log in message.logs"
+          class="level{{ log[1] }}">
         <td>{{ log[0] }}</td>
         <td>{{ log[2] }}</td>
       </tr>

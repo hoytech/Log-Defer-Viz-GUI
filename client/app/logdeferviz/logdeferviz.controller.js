@@ -5,10 +5,12 @@
     .module('app')
     .controller('LogDeferViz',LogDeferVizController);
 
-  function LogDeferVizController(Thrust,$scope) {
+  function LogDeferVizController($scope,Thrust,LogViewPref) {
     var self = this;
+    self.model = {};
 
-    angular.extend(self, {model: Thrust.get()});
+    angular.extend(self.model, { messages: Thrust.get() });
+    angular.extend(self.model, { prefs: LogViewPref.get() });
 
     $scope.$on('new-msg', function() {
       $scope.$apply(function() {

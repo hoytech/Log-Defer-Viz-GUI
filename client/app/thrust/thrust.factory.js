@@ -35,7 +35,7 @@
         if (current !== undefined) {
           return ThrustModel.messages.slice(current);
         }
-        return ThrustModel;
+        return ThrustModel.messages;
       }
 
     };
