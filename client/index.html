@@ -8,11 +8,11 @@
 
   <body style="padding-top: 70px;">
 
-    <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <nav ng-controller="Nav as nav" class="navbar navbar-inverse navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">LDVG: {{ cmd_line }}</a>
+          <span class="navbar-brand">LDVG: {{ nav.model.thrust.cmd_line }}</span>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse">
@@ -72,6 +72,7 @@
     <script src="app/logdeferviz/logdeferviz.controller.js"></script>
     <script src="app/logviewpref/logviewpref.factory.js"></script>
     <script src="app/logviewpref/logviewpref.controller.js"></script>
+    <script src="app/nav/nav.controller.js"></script>
 
     <script>
       $('.dropdown-menu').on('click', function(e) {

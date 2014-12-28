@@ -38,11 +38,8 @@ console.log(msg);
         }
       },
 
-      get: function(current) {
-        if (current !== undefined) {
-          return ThrustModel.messages.slice(current);
-        }
-        return ThrustModel.messages;
+      get: function() {
+        return ThrustModel;
       }
 
     };

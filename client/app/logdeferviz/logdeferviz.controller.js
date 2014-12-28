@@ -9,12 +9,12 @@
     var self = this;
     self.model = {};
 
-    angular.extend(self.model, { messages: Thrust.get() });
+    angular.extend(self.model, { thrust: Thrust.get() });
     angular.extend(self.model, { prefs: LogViewPref.get() });
 
     $scope.$on('new-msg', function() {
       $scope.$apply(function() {
-        self.model.messages.push();
+        angular.extend(self.model, { thrust: Thrust.get() });
       });
     });
 
