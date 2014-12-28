@@ -14,7 +14,7 @@
 
     $scope.$on('new-msg', function() {
       $scope.$apply(function() {
-        angular.extend(self.model, { thrust: Thrust.get() });
+        self.model.thrust.messages = Thrust.messages();
       });
     });
 

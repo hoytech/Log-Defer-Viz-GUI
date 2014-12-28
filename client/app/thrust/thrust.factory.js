@@ -38,7 +38,11 @@
 
       get: function() {
         return ThrustModel;
-      }
+      },
+
+      messages: function() {
+        return ThrustModel.messages;
+      },
 
     };
   }
