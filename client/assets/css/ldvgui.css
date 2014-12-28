@@ -27,3 +27,7 @@ ul.dropdown-menu-form {
   font-family: monospace;
   white-space: pre;
 }
+
+.log-msg thead {
+  background-color: #DFDFDF;
+}
