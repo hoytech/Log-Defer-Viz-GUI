@@ -5,19 +5,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap/dist/css/bootstrap.css"></link>
     <link rel="stylesheet" type="text/css" href="assets/css/fontawesome/css/font-awesome.css"></link>
     <link rel="stylesheet" type="text/css" href="assets/css/ldvgui.css"></link>
-  </head>
-
-  <body style="padding: 30px 0 0 0; margin-bottom: 70px;">
-
-    <ng-include src="'nav/nav.view.html'"/>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <ng-view></ng-view>
-        </div>
-      </div>
-    </div>
 
     <script src="assets/js/angularjs/angular.js"></script>
     <script src="assets/js/angular-route/angular-route.js"></script>
@@ -38,6 +25,16 @@
     <script src="app/logviewpref/logviewpref.controller.js"></script>
     <script src="app/nav/menuclose.directive.js"></script>
     <script src="app/nav/nav.controller.js"></script>
+  </head>
 
+  <body style="padding: 30px 0 0 0; margin-bottom: 70px;">
+    <ng-include src="'nav/nav.view.html'"/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ng-view></ng-view>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

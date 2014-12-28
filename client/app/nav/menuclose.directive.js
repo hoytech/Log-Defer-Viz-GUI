@@ -13,8 +13,7 @@
           e.stopPropagation();
         });
       }
-    }
-
+    };
   }
 
 })();
