@@ -7,59 +7,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/ldvgui.css"></link>
   </head>
 
-  <body style="padding-top: 70px;">
+  <body style="padding: 30px 0 0 0; margin-bottom: 70px;">
 
-    <!-- navbar starts -->
-    <nav ng-controller="Nav as nav" class="navbar navbar-inverse navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <span class="navbar-brand">LDVG: {{ nav.model.thrust.cmd_line }}</span>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#"
-                 class="dropdown-toggle"
-                 data-toggle="dropdown"
-                 role="button"
-                 aria-expanded="false"><i class="fa fa-fw fa-gear"></i>
-              </a>
-              <ul ng-controller="LogViewPref as lvp" class="dropdown-menu dropdown-menu-form" role="menu">
-                <li role="presentation" class="dropdown-header">Log Level</li>
-                <li>
-                  <label class="checkbox">
-                    <input type="checkbox" ng-model="lvp.model.debug">
-                    <span class="text-info">Debug</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="checkbox">
-                    <input type="checkbox" ng-model="lvp.model.info">
-                    <span class="text-success">Info</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="checkbox">
-                    <input type="checkbox" ng-model="lvp.model.warning">
-                    <span class="text-warning">Warning</span>
-                  </label>
-                </li>
-                <li>
-                  <label class="checkbox">
-                    <input type="checkbox" ng-model="lvp.model.error">
-                    <span class="text-danger">Error</span>
-                  </label>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- navbar ends -->
-
+    <ng-include src="'nav/nav.view.html'"/>
 
     <div class="container">
       <div class="row">
