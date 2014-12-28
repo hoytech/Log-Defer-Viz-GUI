@@ -17,7 +17,7 @@ my $thrust = Thrust->new;
 
 my $window = $thrust->window(
               root_url => 'file://' . dirname(abs_path($0)) . '/index.html',
-              title => 'Log Defer Viz: ' . join(' ', @ARGV),
+              title => 'LDVG: ' . join(' ', @ARGV),
               icon_path => dirname(abs_path($0)) . '/assets/img/icon.png',
             )->on(closed => sub { exit })
              ->open_devtools

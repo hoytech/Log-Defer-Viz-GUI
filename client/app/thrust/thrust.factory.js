@@ -9,7 +9,7 @@
 
     var ThrustModel = {
       messages: [],
-      cmd_line: 'lol',
+      cmd_line: '',
     };
 
     return {
@@ -19,8 +19,6 @@
 
         THRUST.remote.listen(function(msg) {
           if (msg.init) {
-console.log("INIT");
-console.log(msg);
             ThrustModel.cmd_line = msg.init.cmd_line;
           } else if (msg.entry) {
             self.add(msg.entry);
