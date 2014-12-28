@@ -1,8 +1,3 @@
-body {
-  font-family: Helvetica, Arial, Sans-Serif;
-  background-color: rgb(192, 238, 255);
-}
-
 .log-msg .log-list {
   margin-left: 50px;
   margin-bottom: 25px;
@@ -22,4 +17,13 @@ body {
 
 .log-msg .log-list tr.level40 {
   color: blue;
+}
+
+ul.dropdown-menu-form {
+    padding: 5px 35px 0;
+}
+
+.preformatted {
+  font-family: monospace;
+  white-space: pre;
 }

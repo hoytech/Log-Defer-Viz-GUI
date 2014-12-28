@@ -53,17 +53,31 @@ module.exports = function(grunt) {
         }]
       },
       'bower-to-build-dir': {
-        files: [{
-          expand: true,
-          flatten: false,
-          cwd: 'bower_components',
-          src: [
-            'angularjs/angular.js',
-            'angular-route/angular-route.js',
-            'jsstyles/dist/jss.min.js'
-          ],
-          dest: '.tmp/assets/js/'
-        }]
+        files: [
+          {
+            expand: true,
+            flatten: false,
+            cwd: 'bower_components',
+            src: [
+              'jsstyles/dist/jss.min.js',
+              'angularjs/angular.js',
+              'angular-route/angular-route.js',
+              'angular-bootstrap/ui-bootstrap-tpls.js',
+              'bootstrap/dist/js/bootstrap.js',
+              'jquery/dist/jquery.js',
+            ],
+            dest: '.tmp/assets/js/'
+          },
+          {
+            expand: true,
+            flatten: false,
+            cwd: 'bower_components',
+            src: [
+              'bootstrap/dist/css/bootstrap.css',
+            ],
+            dest: '.tmp/assets/css/'
+          }
+        ]
       }
     },
 

@@ -9,6 +9,8 @@
     var self = this;
     self.model = {};
 
+    console.log("hello world");
+
     var sheet = jss.createStyleSheet({
       '.log-msg .log-list tr.level10': { },
       '.log-msg .log-list tr.level20': { },
@@ -32,10 +34,10 @@
 
   function compilecss(prefs,sheet) {
 
-    sheet.getRule('.log-msg .log-list tr.level10').prop('display',prefs.error ? 'block' : 'none');
-    sheet.getRule('.log-msg .log-list tr.level20').prop('display',prefs.warning ? 'block' : 'none');
-    sheet.getRule('.log-msg .log-list tr.level30').prop('display',prefs.info ? 'block' : 'none');
-    sheet.getRule('.log-msg .log-list tr.level40').prop('display',prefs.debug ? 'block' : 'none');
+    sheet.getRule('.log-msg .log-list tr.level10').prop('display',prefs.error ? 'table-row' : 'none');
+    sheet.getRule('.log-msg .log-list tr.level20').prop('display',prefs.warning ? 'table-row' : 'none');
+    sheet.getRule('.log-msg .log-list tr.level30').prop('display',prefs.info ? 'table-row' : 'none');
+    sheet.getRule('.log-msg .log-list tr.level40').prop('display',prefs.debug ? 'table-row' : 'none');
 
   }
 

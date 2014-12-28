@@ -14,7 +14,7 @@
 
     $scope.$on('new-msg', function() {
       $scope.$apply(function() {
-        self.model.messages.push(Thrust.get(self.model.messages.length - 1));
+        self.model.messages.push();
       });
     });
 
