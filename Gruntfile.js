@@ -74,6 +74,12 @@ module.exports = function(grunt) {
             cwd: 'bower_components',
             src: [
               'bootstrap/dist/css/bootstrap.css',
+              'fontawesome/css/font-awesome.css',
+              'fontawesome/fonts/FontAwesome.otf.css',
+              'fontawesome/fonts/fontawesome-webfont.eot',
+              'fontawesome/fonts/fontawesome-webfont.svg',
+              'fontawesome/fonts/fontawesome-webfont.ttf',
+              'fontawesome/fonts/fontawesome-webfont.woff',
             ],
             dest: '.tmp/assets/css/'
           }

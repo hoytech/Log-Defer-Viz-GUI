@@ -13,7 +13,7 @@
       <tbody class="log-list">
         <tr ng-repeat="log in message.logs"
             class="level{{ log[1] }}">
-          <td class="text-center" style="width: 10%">ERROR</td>
+          <td class="text-center" style="width: 10%; text-transform: uppercase">{{ log[1] | logLeveltoString }}</td>
           <td class="text-left" style="width: 12%">+{{ log[0] }}</td>
           <td class="preformatted">{{ log[2] }}</td>
         </tr>

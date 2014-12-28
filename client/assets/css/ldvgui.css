@@ -3,24 +3,36 @@
   margin-bottom: 25px;
 }
 
-.log-msg .log-list tr.level10 {
-  color: red;
-}
-
-.log-msg .log-list tr.level20 {
-  color: #A84100;
-}
-
-.log-msg .log-list tr.level30 {
-  color: green;
-}
-
+/* debug */
 .log-msg .log-list tr.level40 {
-  color: blue;
+  color: #31708f;
 }
 
-ul.dropdown-menu-form {
-    padding: 5px 35px 0;
+/* info */
+.log-msg .log-list tr.level30 {
+  color: #3c763d;
+}
+
+/* warning */
+.log-msg .log-list tr.level20 {
+  color: #8a6d3b;
+}
+
+/* error */
+.log-msg .log-list tr.level10 {
+  color: #a94442;
+}
+
+ul.dropdown-menu-form li {
+  margin-left: 40px;
+}
+
+ul.dropdown-menu-form li label {
+  font-weight: normal;
+}
+
+ul.dropdown-menu-form li.dropdown-header {
+  margin-left: 0px;
 }
 
 .preformatted {
