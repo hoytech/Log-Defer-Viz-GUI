@@ -23,6 +23,7 @@
           } else if (msg.entry) {
             self.add(msg.entry);
           }
+          $rootScope.$apply();
         });
 
         THRUST.remote.send({ message: 'ready' });
@@ -32,7 +33,6 @@
       add: function(msg) {
         if (msg) {
           ThrustModel.messages.push(msg);
-          $rootScope.$broadcast('new-msg');
         }
       },
 
