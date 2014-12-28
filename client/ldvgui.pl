@@ -26,6 +26,9 @@ my $window = $thrust->window(
 $window->on(remote => sub {
   $window->clear('remote');
 
+  ## Send init message
+  $window->remote({ message => { init => { cmd_line => join ' ', @ARGV, } }, });
+
   open(my $fh, '-|', 'log-defer-viz', '--pass-through', @ARGV) || die "unable to run log-defer-viz: $!";
 
   my $ldv_handle; $ldv_handle = AnyEvent::Handle->new(fh => $fh, on_error => sub { undef $ldv_handle });
@@ -33,7 +36,7 @@ $window->on(remote => sub {
   my $message_handler; $message_handler = sub {
     my ($handle, $msg) = @_;
 
-    $window->remote({ message => $msg, });
+    $window->remote({ message => { entry => $msg, } });
 
     $handle->push_read(json => $message_handler);
   };

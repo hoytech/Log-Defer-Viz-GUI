@@ -8,7 +8,8 @@
   function ThrustFactory($rootScope) {
 
     var ThrustModel = {
-      messages: []
+      messages: [],
+      cmd_line: 'lol',
     };
 
     return {
@@ -17,7 +18,13 @@
         var self = this;
 
         THRUST.remote.listen(function(msg) {
-          self.add(msg);
+          if (msg.init) {
+console.log("INIT");
+console.log(msg);
+            ThrustModel.cmd_line = msg.init.cmd_line;
+          } else if (msg.entry) {
+            self.add(msg.entry);
+          }
         });
 
         THRUST.remote.send({ message: 'ready' });
