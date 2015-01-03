@@ -1,0 +1,13 @@
+For 1.0 release:
+
+* smarter scrollbar
+* some stats at the bottom (avg/median/max times)
+* save/reload preferences
+* fix buffering issue in tail -f mode
+* Figure out cpan dist stuff
+
+Long term:
+
+* graphing functionality
+  * response time scatter plots/histograms
+  * swim-lane concurrency debugger
