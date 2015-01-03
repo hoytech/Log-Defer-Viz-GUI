@@ -24,6 +24,19 @@
       true
     );
 
+    $scope.$watch(
+      function() { return LogViewPref.get(); },
+      function(newVal,oldVal) {
+        var show_pinned = newVal.show_pinned;
+        if (show_pinned) {
+          self.model.filter = {pinned: true};
+        } else {
+          self.model.filter = '';
+        }
+      },
+      true
+    );
+
   }
 
 })();
