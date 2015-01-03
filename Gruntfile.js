@@ -65,6 +65,9 @@ module.exports = function(grunt) {
               'angular-bootstrap/ui-bootstrap-tpls.js',
               'bootstrap/dist/js/bootstrap.js',
               'jquery/dist/jquery.js',
+              'momentjs/moment.js',
+              'moment-timezone/builds/moment-timezone-with-data.js',
+              'angular-moment/angular-moment.js',
             ],
             dest: '.tmp/assets/js/'
           },
