@@ -8,10 +8,15 @@
     function LogViewPrefFactory() {
 
       var LogViewPrefModel = {
-        debug: false,
-        info: true,
-        warning: true,
-        error: true,
+        loglevel: {
+          debug: false,
+          info: true,
+          warning: true,
+          error: true,
+        },
+        timezone: {
+          TZ: '',
+        }
       };
 
       return {
@@ -22,6 +27,14 @@
 
         set: function(model) {
           LogViewPrefModel = angular.copy(model);
+        },
+
+        loglevel: function() {
+          return LogViewPrefModel.loglevel;
+        },
+
+        timezone: function() {
+          return LogViewPrefModel.timezone;
         },
 
       };

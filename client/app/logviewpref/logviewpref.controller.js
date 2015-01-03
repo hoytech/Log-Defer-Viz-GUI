@@ -5,7 +5,7 @@
     .module('app')
     .controller('LogViewPref', LogViewPrefController);
 
-  function LogViewPrefController($scope,LogViewPref) {
+  function LogViewPrefController($scope,LogViewPref,angularMomentConfig,$route) {
     var self = this;
 
     angular.extend(self, {model: LogViewPref.get()});
@@ -21,10 +21,19 @@
     compilecss(self.model,sheet);
 
     $scope.$watch(
+      function() { return self.model.loglevel; },
+      function() {
+        LogViewPref.set(self.model);
+        compilecss(self.model.loglevel,sheet);
+      },
+      true
+    );
+
+    $scope.$watch(
       function() { return self.model; },
-      function(newVal,oldVal) {
-        LogViewPref.set(newVal);
-        compilecss(newVal,sheet);
+      function() {
+        LogViewPref.set(self.model);
+        angularMomentConfig.timezone = self.model.timezone.TZ;
       },
       true
     );

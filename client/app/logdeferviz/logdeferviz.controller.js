@@ -5,7 +5,7 @@
     .module('app')
     .controller('LogDeferViz',LogDeferVizController);
 
-  function LogDeferVizController($scope,Thrust,LogViewPref) {
+  function LogDeferVizController($route,$scope,Thrust,LogViewPref) {
     var self = this;
     self.model = {};
 
@@ -32,6 +32,16 @@
           self.model.filter = {pinned: true};
         } else {
           self.model.filter = '';
+        }
+      },
+      true
+    );
+
+    $scope.$watch(
+      function() { return LogViewPref.timezone(); },
+      function(newVal,oldVal) {
+        if (newVal !== oldVal) {
+          $route.reload();
         }
       },
       true
