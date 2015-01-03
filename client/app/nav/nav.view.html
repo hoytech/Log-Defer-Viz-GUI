@@ -6,44 +6,54 @@
       LDVG: {{ nav.model.thrust.cmd_line }}
     </span>
 
-    <div class="btn-group dropup" style="line-height: 54px; position: absolute; right: 15px;">
-      <i class="fa fa-fw fa-lg fa-bars"
-         data-toggle="dropdown"
-         aria-expanded="false"></i>
+    <span ng-controller="LogViewPref as lvp"
+          style="line-height: 54px; position: absolute; right: 15px;">
 
-      <ul ng-controller="LogViewPref as lvp"
-          stop-menu-close
-          toggle-sidebar
-          class="dropdown-menu dropdown-menu-right dropdown-menu-form"
-          role="menu"
-          style="line-height: 20px;">
-        <li role="presentation" class="dropdown-header">Log Level</li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox" ng-model="lvp.model.debug">
-            <span class="text-info">Debug</span>
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox" ng-model="lvp.model.info">
-            <span class="text-success">Info</span>
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox" ng-model="lvp.model.warning">
-            <span class="text-warning">Warning</span>
-          </label>
-        </li>
-        <li>
-          <label class="checkbox">
-            <input type="checkbox" ng-model="lvp.model.error">
-            <span class="text-danger">Error</span>
-          </label>
-        </li>
-      </ul>
+      <i class="fa fa-fw fa-lg fa-thumb-tack"
+         style="position: relative; top: 1px; right: 10px;"
+         ng-click="lvp.model.show_pinned = !lvp.model.show_pinned"
+         ng-class="{
+          'text-primary': lvp.model.show_pinned,
+          'text-default': !lvp.model.show_pinned
+         }"></i>
+
+      <div class="btn-group dropup">
+        <i class="fa fa-fw fa-lg fa-bars"
+           data-toggle="dropdown"
+           aria-expanded="false"></i>
+
+        <ul stop-menu-close
+            class="dropdown-menu dropdown-menu-right dropdown-menu-form"
+            role="menu"
+            style="line-height: 20px;">
+          <li role="presentation" class="dropdown-header">Log Level</li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" ng-model="lvp.model.debug">
+              <span class="text-info">Debug</span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" ng-model="lvp.model.info">
+              <span class="text-success">Info</span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" ng-model="lvp.model.warning">
+              <span class="text-warning">Warning</span>
+            </label>
+          </li>
+          <li>
+            <label class="checkbox">
+              <input type="checkbox" ng-model="lvp.model.error">
+              <span class="text-danger">Error</span>
+            </label>
+          </li>
+        </ul>
+      </div>
     </div>
 
-  </div>
+  </span>
 </nav>
