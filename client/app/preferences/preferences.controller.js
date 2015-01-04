@@ -5,7 +5,7 @@
     .module('app')
     .controller('Preferences', PreferencesController);
 
-  function PreferencesController($scope,Preferences,angularMomentConfig,$route) {
+  function PreferencesController($scope,Preferences,angularMomentConfig) {
     var self = this;
 
     angular.extend(self, {model: Preferences.get()});
