@@ -12,6 +12,8 @@
       cmd_line: '',
     };
 
+    var msg_id = 0;
+
     return {
 
       initialize: function() {
@@ -32,6 +34,7 @@
 
       add: function(msg) {
         if (msg) {
+          msg.id = msg_id = msg_id + 1;
           ThrustModel.messages.push(msg);
         }
       },

@@ -2,7 +2,7 @@
 
   <div ng-repeat="message in dashboard.model.thrust.messages |
                   filter:dashboard.model.filter
-                  track by $index"
+                  track by message.id"
        ng-controller="LogMsgViz as lmv"
        ng-init="init(message)"
        ng-include="'logmsgviz/logmsgviz.view.html'"
