@@ -7,12 +7,11 @@
 
   function ThrustFactory($rootScope) {
 
+    var msg_id = 0;
     var ThrustModel = {
       messages: [],
       cmd_line: '',
     };
-
-    var msg_id = 0;
 
     return {
 
