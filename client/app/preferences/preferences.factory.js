@@ -3,11 +3,11 @@
 
   angular
     .module('app')
-    .factory('LogViewPref',LogViewPrefFactory);
+    .factory('Preferences',PreferencesFactory);
 
-    function LogViewPrefFactory() {
+    function PreferencesFactory() {
 
-      var LogViewPrefModel = {
+      var PreferencesModel = {
         loglevel: {
           debug: false,
           info: true,
@@ -16,25 +16,26 @@
         },
         timezone: {
           TZ: '',
-        }
+        },
+        show_pinned: false,
       };
 
       return {
 
         get: function() {
-          return angular.copy(LogViewPrefModel);
+          return PreferencesModel;
         },
 
         set: function(model) {
-          LogViewPrefModel = angular.copy(model);
+          PreferencesModel = model;
         },
 
         loglevel: function() {
-          return LogViewPrefModel.loglevel;
+          return PreferencesModel.loglevel;
         },
 
         timezone: function() {
-          return LogViewPrefModel.timezone;
+          return PreferencesModel.timezone;
         },
 
       };

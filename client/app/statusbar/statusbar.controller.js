@@ -3,9 +3,9 @@
 
   angular
     .module('app')
-    .controller('Nav', NavController);
+    .controller('StatusBar', StatusBarController);
 
-  function NavController(Thrust) {
+  function StatusBarController(Thrust) {
     var self = this;
     self.model = {};
     angular.extend(self.model,{thrust: Thrust.get()});

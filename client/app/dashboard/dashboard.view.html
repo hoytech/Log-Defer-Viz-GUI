@@ -1,0 +1,13 @@
+<div class="log-msg">
+
+  <div ng-repeat="message in dashboard.model.thrust.messages |
+                  filter:dashboard.model.filter
+                  track by $index"
+       ng-controller="LogMsgViz as lmv"
+       ng-init="init(message)"
+       ng-include="'logmsgviz/logmsgviz.view.html'"
+       class="table-responsive">
+
+  </div>
+
+</div>

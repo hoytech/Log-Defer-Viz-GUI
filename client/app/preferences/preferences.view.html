@@ -1,12 +1,12 @@
-<span ng-controller="LogViewPref as lvp"
+<span ng-controller="Preferences as pref"
       style="line-height: 54px; position: absolute; right: 15px;">
 
   <i class="fa fa-fw fa-lg fa-thumb-tack"
      style="position: relative; top: 1px; right: 10px;"
-     ng-click="lvp.model.show_pinned = !lvp.model.show_pinned"
+     ng-click="pref.model.show_pinned = !pref.model.show_pinned"
      ng-class="{
-      'text-primary': lvp.model.show_pinned,
-      'text-default': !lvp.model.show_pinned
+      'text-primary': pref.model.show_pinned,
+      'text-default': !pref.model.show_pinned
      }"></i>
 
   <div class="btn-group dropup">
@@ -23,11 +23,11 @@
       <li role="presentation" class="dropdown-header">Timezone</li>
       <li>
         <label class="radio">
-          <input type="radio" ng-model="lvp.model.timezone.TZ" value="">
+          <input type="radio" ng-model="pref.model.timezone.TZ" value="">
           <span class="text-default">Local</span>
         </label>
         <label class="radio">
-          <input type="radio" ng-model="lvp.model.timezone.TZ" value="UTC">
+          <input type="radio" ng-model="pref.model.timezone.TZ" value="UTC">
           <span class="text-default">UTC</span>
         </label>
       </li>
@@ -37,25 +37,25 @@
       <li role="presentation" class="dropdown-header">Log Level</li>
       <li>
         <label class="checkbox">
-          <input type="checkbox" ng-model="lvp.model.loglevel.debug">
+          <input type="checkbox" ng-model="pref.model.loglevel.debug">
           <span class="text-info">Debug</span>
         </label>
       </li>
       <li>
         <label class="checkbox">
-          <input type="checkbox" ng-model="lvp.model.loglevel.info">
+          <input type="checkbox" ng-model="pref.model.loglevel.info">
           <span class="text-success">Info</span>
         </label>
       </li>
       <li>
         <label class="checkbox">
-          <input type="checkbox" ng-model="lvp.model.loglevel.warning">
+          <input type="checkbox" ng-model="pref.model.loglevel.warning">
           <span class="text-warning">Warning</span>
         </label>
       </li>
       <li>
         <label class="checkbox">
-          <input type="checkbox" ng-model="lvp.model.loglevel.error">
+          <input type="checkbox" ng-model="pref.model.loglevel.error">
           <span class="text-danger">Error</span>
         </label>
       </li>

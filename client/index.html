@@ -22,12 +22,13 @@
     <script src="app/app.run.js"></script>
 
     <script src="app/thrust/thrust.factory.js"></script>
-    <script src="app/logdeferviz/logdeferviz.controller.js"></script>
-    <script src="app/logdeferviz/logleveltostring.filter.js"></script>
-    <script src="app/logviewpref/logviewpref.factory.js"></script>
-    <script src="app/logviewpref/logviewpref.controller.js"></script>
-    <script src="app/nav/menuclose.directive.js"></script>
-    <script src="app/nav/nav.controller.js"></script>
+    <script src="app/dashboard/dashboard.controller.js"></script>
+    <script src="app/logmsgviz/logmsgviz.controller.js"></script>
+    <script src="app/logmsgviz/logleveltostring.filter.js"></script>
+    <script src="app/preferences/preferences.factory.js"></script>
+    <script src="app/preferences/preferences.controller.js"></script>
+    <script src="app/statusbar/menuclose.directive.js"></script>
+    <script src="app/statusbar/statusbar.controller.js"></script>
   </head>
 
   <body style="padding-top: 30px; margin-bottom: 70px;">
@@ -38,6 +39,6 @@
         </div>
       </div>
     </div>
-    <ng-include src="'nav/nav.view.html'"/>
+    <ng-include src="'statusbar/statusbar.view.html'"/>
   </body>
 </html>

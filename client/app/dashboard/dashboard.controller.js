@@ -3,14 +3,16 @@
 
   angular
     .module('app')
-    .controller('LogDeferViz',LogDeferVizController);
+    .controller('Dashboard',DashboardController);
 
-  function LogDeferVizController($route,$scope,Thrust,LogViewPref) {
+  function DashboardController($route,$scope,Thrust,Preferences) {
     var self = this;
     self.model = {};
 
-    angular.extend(self.model, { thrust: Thrust.get() });
-    angular.extend(self.model, { prefs: LogViewPref.get() });
+    angular.extend(self.model, {
+      thrust: Thrust.get(),
+      prefs: Preferences.get()
+    });
 
     $scope.$watch(
       function() {
@@ -25,7 +27,7 @@
     );
 
     $scope.$watch(
-      function() { return LogViewPref.get(); },
+      function() { return Preferences.get(); },
       function(newVal,oldVal) {
         var show_pinned = newVal.show_pinned;
         if (show_pinned) {
@@ -38,7 +40,7 @@
     );
 
     $scope.$watch(
-      function() { return LogViewPref.timezone(); },
+      function() { return Preferences.timezone(); },
       function(newVal,oldVal) {
         if (newVal !== oldVal) {
           $route.reload();
@@ -48,5 +50,4 @@
     );
 
   }
-
 })();

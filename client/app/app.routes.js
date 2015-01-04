@@ -8,9 +8,9 @@
   function routes($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'logdeferviz/logdeferviz.view.html',
-        controller: 'LogDeferViz',
-        controllerAs: 'ldv',
+        templateUrl: 'dashboard/dashboard.view.html',
+        controller: 'Dashboard',
+        controllerAs: 'dashboard',
       })
       .otherwise({
         redirectTo: '/'
